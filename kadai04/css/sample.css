@@ -1,0 +1,60 @@
+body{
+    font-family: "游ゴシック";
+    margin:0;
+    padding:0;
+    text-align:left;
+    font-size: 32px;
+    background-color: #1B435D;
+}
+header{
+    background-color: #D5EEFF;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    color:#1B435D;
+}
+main{
+    border-bottom:1px solid #ccc;
+    /*background-color: #1B435D*/
+    color:#fff;
+}
+
+
+
+footer{
+    background-color: #fff;
+    border-bottom:1px solid #ccc;
+    text-align: center;
+    
+}
+p{
+    font-size:200%;
+    text-align: center;
+    /*border-bottom:1px solid #fff;*/
+    /* height:200px; */
+    margin: 0;
+    color:#fff;
+    
+}
+ul{
+    padding: 0;
+    border-top: 1px solid #000000;
+    display:table;  /* 定義 */
+    table-layout: fixed;
+    width:100%;
+    
+    
+}
+li{
+    text-align: center;
+    list-style-type:none;
+    border: 1px solid #666;
+    background-color: #FFF;
+    display:table-cell;  /* 定義 */
+    cursor: pointer;
+    color:#1B435D;
+    
+}
+li:hover{
+    background:#F99F48;
+    color:#fff;
+}
