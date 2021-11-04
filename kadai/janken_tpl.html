@@ -9,6 +9,7 @@
 </head>
 <body>
 
+
 <header>
   <h1>じゃんけん</h1>
 </header>
@@ -19,21 +20,99 @@
     <li id="cho_btn">チョキ</li>
     <li id="par_btn">パー</li>
   </ul>
-  <div>コンピュータの出した手は？「<span id="pc_hands">なに？</span>」</div>
-  <div id="judgment">勝ち</div>
+  <div>コンピュータの出した手は？<span id="pc_hands">「なに？」</span></div>
+  <p id="te"></p>
+  <div id="judgment">勝敗は…</div>
 </main>
 
 <footer></footer>
 <script>
 //じゃんけん用のSCRIPTを書いてください
 
-    
-    
-    
-    
-    
-    
-    
+//1.クリックイベント
+//2.乱数を生成
+//3.IF分を3個用意["ぐーちょきぱー"]
+//4.IF文の中に$("#").html()を使って表示させる
+
+$("#gu_btn").on("click", function(){
+  const num = Math.ceil(Math.random() * 3);
+
+  if(num==1){
+    $("#pc_hands").html("<p>コンピュータ：グー</p>");
+    $("#te").html('<img src="janken_gu.png" width="100">');
+    $("#judgment").html("<p>あいこです</p>");
+    $("#judgment").hide().fadeIn(1000);
+  }
+
+  if(num==2){
+    $("#pc_hands").html("<p>コンピュータ：チョキ</p>");
+    $("#te").html('<img src="janken_choki.png" width="100">');
+    $("#judgment").html("<p>あなたの勝ち</p>");
+    $("#judgment").hide().fadeIn(1000);
+  }
+
+  if(num==3){
+    $("#pc_hands").html("<p>コンピュータ：パー</p>");
+    $("#te").html('<img src="janken_pa.png" width="100">');
+    $("#judgment").html("<p>あなたの負け</p>");
+    $("#judgment").hide().fadeIn(1000);
+  }
+
+});
+
+
+$("#cho_btn").on("click", function(){
+  const num = Math.ceil(Math.random() * 3);
+
+  if(num==1){
+    $("#pc_hands").html("<p>コンピュータ：グー</p>");
+    $("#te").html('<img src="janken_gu.png" width="100">');
+    $("#judgment").html("<p>あなたの負け</p>");
+    $("#judgment").hide().fadeIn(1000);
+  }
+
+  if(num==2){
+    $("#pc_hands").html("<p>コンピュータ：チョキ</p>");
+    $("#te").html('<img src="janken_choki.png" width="100">');
+    $("#judgment").html("<p>あいこです</p>");
+    $("#judgment").hide().fadeIn(1000);
+  }
+
+  if(num==3){
+    $("#pc_hands").html("<p>コンピュータ：パー</p>");
+    $("#te").html('<img src="janken_pa.png" width="100">');
+    $("#judgment").html("<p>あなたの勝ち</p>");
+    $("#judgment").hide().fadeIn(1000);
+  }
+
+});
+
+
+$("#par_btn").on("click", function(){
+  const num = Math.ceil(Math.random() * 3);
+
+  if(num==1){
+    $("#pc_hands").html("<p>コンピュータ：グー</p>");
+    $("#te").html('<img src="janken_gu.png" width="100">');
+    $("#judgment").html("<p>あなたの勝ち</p>");
+    $("#judgment").hide().fadeIn(1000);
+  }
+
+  if(num==2){
+    $("#pc_hands").html("<p>コンピュータ：チョキ</p>");
+    $("#te").html('<img src="janken_choki.png" width="100">');
+    $("#judgment").html("<p>あなたの負け</p>");
+    $("#judgment").hide().fadeIn(1000);
+  }
+
+  if(num==3){
+    $("#pc_hands").html("<p>コンピュータ：パー</p>");
+    $("#te").html('<img src="janken_pa.png" width="100">');
+    $("#judgment").html("<p>あいこです</p>");
+    $("#judgment").hide().fadeIn(1000);
+  }
+
+});
 
 </script>
 </body>
