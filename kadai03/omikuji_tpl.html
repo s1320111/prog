@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="js/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="css/sample.css">
+<title>おみくじ</title>
+</head>
+<body>
+
+<header>
+    <h1 id="aa">
+        大妻神社
+        <p>おみくじ</p>
+    </h1>
+</header>
+
+<main>
+    <ul>
+        <li id="pull">おみくじを引く</li>
+    </ul>
+    <p id="echo">結果...</p>
+    <h2 id="come"></h2>
+</main>
+
+<footer>Copyright © Imaizumi Urara All Rights Reserved.</footer>
+
+<script>
+
+    const pull =document.querySelector("#pull");
+    pull.onclick = function(){
+        const echo = document.querySelector("#echo");
+        const come = document.querySelector("#come");
+        come.style.fontSize = "35px";
+        come.style.fontWeight = "lighter";
+        
+        const num = Math.ceil(Math.random()*5);
+        
+        if(num==1){
+            echo.innerHTML = '<img src = "omikuji_daikichi.png" height = "180px">';
+            come.innerHTML = "向かうところ敵なし!!";
+            come.style.backgroundColor = "#FFA07A";
+            }
+
+        if(num==2){
+            echo.innerHTML = '<img src = "omikuji_chuukichi.png" height = "180px">';
+            come.innerHTML = "いい感じかも!!";
+            come.style.backgroundColor = "#ffa040";
+            }
+
+        if(num==3){
+            echo.innerHTML = '<img src = "omikuji_syoukichi.png" height = "180px">';
+            come.innerHTML = "ちょっといい感じ!!";
+            come.style.backgroundColor = "#00a0a0";
+            }
+
+        if(num==4){
+            echo.innerHTML = '<img src = "omikuji_kichi.png" height = "180px">';
+            come.innerHTML = "いい感じ!!";
+            come.style.backgroundColor = "#4080c0";
+            }
+
+        if(num==5){
+            echo.innerHTML = '<img src = "omikuji_kyou.png" height = "180px">';
+            come.innerHTML = "結果より過程!!";
+            come.style.backgroundColor = "#c0a0c0";
+            }
+    }
+        
+
+
+
+
+</script>
+</body>
+</html>
