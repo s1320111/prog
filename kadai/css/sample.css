@@ -1,60 +1,60 @@
 body{
-    font-family: "游ゴシック";
     margin:0;
     padding:0;
     text-align:left;
     font-size: 32px;
-    background-color: #1B435D;
+    font-family: "ＭＳ 明朝";
 }
 header{
-    background-color: #D5EEFF;
+    background-color: #fff;
     border-bottom: 1px solid #ccc;
+    font-size: 15px;
+    line-height: 0.5;
     text-align: center;
-    color:#1B435D;
 }
 main{
     border-bottom:1px solid #ccc;
-    /*background-color: #1B435D*/
-    color:#fff;
+    text-align: center;
 }
-
-
-
 footer{
-    background-color: #fff;
+    background-color: rgb(246, 238, 238);
     border-bottom:1px solid #ccc;
     text-align: center;
-    
+    font-size:20px;
+    margin: 0;
+    padding: 0;
 }
 p{
-    font-size:200%;
+    font-size:50px;
     text-align: center;
     /*border-bottom:1px solid #fff;*/
-    /* height:200px; */
-    margin: 0;
-    color:#fff;
-    
+    height:14px;
 }
+h2{
+    text-align: center;
+    line-height: 8;
+    font-size:50px;
+    color:#fff
+}
+
+
 ul{
     padding: 0;
-    border-top: 1px solid #000000;
+    border-top: 5px solid #000000;
+    border-bottom: 5px solid #000000;
     display:table;  /* 定義 */
     table-layout: fixed;
     width:100%;
-    
-    
 }
 li{
     text-align: center;
     list-style-type:none;
-    border: 1px solid #666;
-    background-color: #FFF;
+    /*border: 1px solid #666;*/
+    background-color: rgb(253, 247, 247);
     display:table-cell;  /* 定義 */
     cursor: pointer;
-    color:#1B435D;
-    
 }
 li:hover{
-    background:#F99F48;
-    color:#fff;
+    background: #ff5555;
+    color:rgb(255, 255, 255);
 }
