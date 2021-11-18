@@ -1,0 +1,174 @@
+body{
+    margin:0;
+    padding:0;
+    /*text-align:left;*/
+    text-align: center;
+    font-size: 32px;
+    width:100%;
+    background-image: url(mori01.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+
+header{
+    /*background-color: #389EA9;
+    /*border-bottom: 1px solid #ccc;*/
+    color: rgb(53, 53, 53);
+    text-align: center;
+    border-bottom:double;/*二重線を引く*/
+    border-color:#FFf;
+    border-width:5px;
+    font-family: 'Comic Sans MS',sans-serif;
+}
+
+
+h1{
+    font-size: 100%;
+}
+
+
+main{
+    width:100%;
+    display: block;
+    /*border-bottom:1px solid #ccc;*/
+    position:relative;
+}
+
+
+footer{
+    background-color: #fff;
+    border-bottom:1px solid #ccc;
+    text-align: center;
+}
+
+
+p{
+    font-size:200%;
+    text-align: center;
+    border-bottom:1px solid #fff;
+    height:200px;
+}
+
+
+ul{
+    padding: 0;
+    /*border-top: 1px solid #000000;*/
+    display:table;  /* 定義 */
+    table-layout: fixed;
+    width:70%;
+    font-size: 80%;
+    margin: auto;
+    /*margin: 0 3%;*/
+    text-align: center;
+}
+
+
+li{
+    list-style-type:none;
+    /*border: 1px solid #666;*/
+    background-color: rgb(231, 230, 223);
+    display:table-cell;  /* 定義 */
+    cursor: pointer;
+    color:#D7902D;
+    border-radius: 8px;
+    border-bottom: solid 4.5px #676e6e;
+    font-family: YuGothic,'Yu Gothic',sans-serif;
+}
+
+
+li:hover{
+    background: #2c2828;
+    color:#fff;
+    font-family: YuGothic,'Yu Gothic',sans-serif;
+}
+
+
+#key{
+    margin:20px;
+    margin-top:5%;
+    height: 40px;
+    width: 40%;
+    font-size:70%;
+    background-color: #389EA9;
+    color:#fff;
+    border-radius: 8px;
+    font-family: YuGothic,'Yu Gothic',sans-serif;
+    /*
+    box-shadow: 3px 3px 3px 3px #555;
+    */
+}
+
+
+textarea{
+    margin: 20px;
+    margin-top:5px;
+    width: 95%;
+    height: 100px;
+    font-size:70%;
+    color:#fff;
+    background-color:#e0b293;
+    border-radius: 8px;
+    font-family: YuGothic,'Yu Gothic',sans-serif;
+    /*
+    box-shadow: 3px 3px 3px 3px #555;
+    */
+}
+
+
+table{
+    margin: 40px 4%;
+    border:2px solid #fff;
+    width:90%;
+    color:#fff;
+}
+
+
+h2{
+    font-size: 25px;
+    color:#fff;
+    text-align: center;
+    margin-top:30px;
+    margin-bottom:-15px;
+    font-family: YuGothic,'Yu Gothic',sans-serif;
+}
+
+
+a{
+    font-size: 20px;
+    padding: 5px;
+    margin-top:30px;
+    margin-bottom:-5px;
+    font-family: YuGothic,'Yu Gothic',sans-serif;
+    text-decoration: none;
+    color:#fff;
+    background-color: #e0b293;
+    border-radius: 8px;
+}
+
+
+a:hover{
+    background: #2c2828;
+    color:#fff;
+    font-family: YuGothic,'Yu Gothic',sans-serif;
+}
+
+
+
+th{
+    width:35%;
+    font-size:20px;
+    background-color:#389EA9;
+    border: 1px solid #fff;
+}
+
+
+td{
+    font-size:17px;
+    background-color:#e0b293;
+    border: 1px solid #fff;
+    /*
+    border-bottom: 1px solid #8dc3f5;
+    */
+}

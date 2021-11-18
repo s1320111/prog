@@ -1,0 +1,39 @@
+h1{
+    font-size: 50px;
+    text-align: center;
+}
+
+
+body{
+    font-family: 'Comic Sans MS',sans-serif;
+    margin:0;
+    padding:0;
+    text-align:left;
+    font-size: 32px;
+    width:100%;
+    text-align: center;
+    background-image: url(mori.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+} 
+
+
+button1{
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+    color:#2c2828;
+    font-size: 25px;
+    padding: 0.3em 0.5em;
+    position:relative;
+	top: 450px;
+    border-bottom: solid 4px #a88a68;
+    border-radius: 3px;
+}
+
+
+button1:hover {
+    background: #2c2828;
+    color:#fff;
+}
+
