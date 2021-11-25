@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-2.1.3.min.js"></script>
+</head>
+<body>
+
+<h1 id=hyouzi></h1>
+
+<script>
+
+//関数
+
+function tasu(a,b) {  
+    const total = a+b;
+    return total;
+}
+
+function hiku(c,d) {  
+    const total = c-d;
+    return total;
+}
+
+function kake(e,f) {  
+    const total = e*f;
+    return total;
+}
+
+function waru(g,h) {  
+    const total = g/h;
+    return total;
+}
+
+
+
+//実行
+
+const a = tasu(10,10);
+console.log(a);
+
+const b = hiku(20,30);
+console.log(b);
+
+const c = kake(40,50);
+console.log(c);
+
+const d = waru(20,5);
+console.log(d);
+
+const e = a+b+c+d;
+console.log(e);
+
+
+$("#hyouzi").html(e);
+//document.querySelector("h1").innerHTML = e;
+
+ </script>
+
+
+
+</body>
+</html>
