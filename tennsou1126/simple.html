@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Firebase:v9:Chatアプリ</title>
+</head>
+<body>
+
+<!-- コンテンツ表示画面 -->
+
+<div>
+    <div> 名前：<input type="text" id="uname"> </div>
+    <div>
+        <textarea id="text" cols="30" rows="10"></textarea>
+        <button id="send">送信</button>
+    </div>
+    <div id = "date"> </div>
+    <div id = "output" style= "overflow:auto; height:300px;"></div>
+</div>
+<!--/ コンテンツ表示画面 -->
+
+
+
+<!-- JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- JQuery -->
+
+
+<!--** 以下Firebase **-->
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
+    import { getDatabase, ref, push, set, onChildAdded, remove, onChildRemoved } 
+    from "https://www.gstatic.com/firebasejs/9.5.0/firebase-database.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyD8g_CPyv1r6Vm2f-Z9NZ4bql93n4f8TSk",
+      authDomain: "sample-6a05b.firebaseapp.com",
+      projectId: "sample-6a05b",
+      storageBucket: "sample-6a05b.appspot.com",
+      messagingSenderId: "56309511610",
+      appId: "1:56309511610:web:bd6ff3872a50ffd31b9983"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db  = getDatabase(app);
+    const dbRef = ref(db,"chat");
+
+
+
+//日時取得
+    const now = new Date(); //日時
+    const year = now.getFullYear(); //年
+    const month = now.getMonth() + 1;  //月は必ず +１をする！
+    const date = now.getDate();
+    const day = now.getDay();  //曜日[0=日曜日,1=月曜日...]
+    const h = now.getHours();
+    const m = now.getMinutes();
+    const s = now.getSeconds();
+
+
+
+//送信
+    $("#send").on("click",function(){
+
+       
+        const msg ={
+        uname : $("#uname").val(),
+        text : $("#text").val(),
+        }
+
+
+    const newPostRef = push(dbRef); //ユニークキーを生成
+    set(newPostRef,msg);
+
+
+
+    });
+
+    onChildAdded(dbRef, function(date){
+        const msg = date.val();
+        const key = date.key;
+        let h = '<p>';
+            h+= msg.uname;
+            h+= '<br>';
+            h+= msg.text;
+            h+= '</p>';
+            $("#output").append(h);
+    });
+
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
