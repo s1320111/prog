@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>-Quiz-</title>
+<link rel="stylesheet" href="css/01.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="sen">
+
+<h1>-Quiz-</h1>
+
+
+<div class="sen">
+</div>
+
+  <div class="sen">
+    <div class="sen">
+    <h2>第1問</h2>
+        <div>
+        <p>1221年に鎌倉幕府打倒を狙って承久の乱を引き起こした上皇は誰？</p>
+        </div>
+    <form id="quiz-1">
+      <input name="answer" type="radio" value="a">鳥羽上皇</input>
+      <input name="answer" type="radio" value="b">後鳥羽上皇</input>
+      <input name="answer" type="radio" value="c">白河上皇</input>
+    </form>
+    <button class="btn" type="button" onclick="answer01();">確定する</button>
+    </div>
+  </div>
+
+
+
+  <div class="sen">
+    <div class="sen">
+    <h2>第2問</h2>
+    <div>
+      <p>古くなった米は何を少し加えると美味しくなる？</p>
+    </div>
+    <form id="quiz-2">
+      <input name="answer" type="radio" value="a">みりん</input>
+      <input  name="answer" type="radio" value="b">塩</input>
+      <input name="answer" type="radio" value="c">ポン酢</input>
+    </form>
+    <button class="btn" type="button" onclick="answer02();">確定する</button>
+    </div> 
+  </div>
+
+
+
+  <div class="sen">
+    <div class="sen">
+    <h2>第3問</h2>
+    <div>
+      <p>靴ずれを防止したい時、靴に塗ると良いのはどれ？</p>
+    </div>
+    <form id="quiz-3">
+      <input name="answer" type="radio" value="a">小麦粉</input>
+      <input name="answer" type="radio" value="b">油</input>
+      <input name="answer" type="radio" value="c">石鹸</input>
+    </form>
+    <button class="btn" type="button" onclick="answer03();">確定する</button>  
+    </div>
+  </div>
+
+
+  <div class="sen">
+    <div class="sen">
+    <h2>第4問</h2>
+    <div>
+      <p>世界四大文明といえば、インダス文明・エジプト文明・メソポタミア文明。あと一つは？</p>
+    </div>
+    <form id="quiz-4">
+      <input name="answer" type="radio" value="a">黄河文明</input>
+      <input name="answer" type="radio" value="b">ミノス文明</input>
+      <input name="answer" type="radio" value="c">スキタイ文明</input>
+    </form>
+    <button class="btn" type="button" onclick="answer04();">確定する</button>  
+    </div>
+  </div>
+
+
+  <div class="sen">
+    <div class="sen">
+    <h2>第5問</h2>
+    <div>
+        <p>
+          A: 犯人はBじゃない！誰かをかばってる。<br>
+          B: しょ、正直に言うわ。私が犯人よ……<br>
+          C: 私が犯人なわけないでしょう？！<br>
+          D: 僕はCは犯人じゃないと思う…。<br>
+          ①犯人は１人　
+          ②犯人は必ず嘘を吐く<br>
+          ③犯人以外は本当の事を言うか嘘を吐くかはわからない。<br>
+          犯人は誰？
+        </p>
+    </div>
+    <form id="quiz-5">
+      <input name="answer" type="radio" value="a">A</input>
+      <input name="answer" type="radio" value="b">B</input>
+      <input name="answer" type="radio" value="c">C</input>
+      <input name="answer" type="radio" value="d">D</input>
+    </form>
+    <button class="btn" type="button" onclick="answer05();">確定する</button>  
+    </div>
+  </div>
+
+  <div class="sen">
+    <h2>第6問</h2>
+    <div>
+      <p>次のうち、本名ではないのは？</p>
+    </div>
+    <form id="quiz-6">
+      <input name="answer" type="radio" value="a">スターリン</input>
+      <input name="answer" type="radio" value="b">ヒトラー</input>
+      <input name="answer" type="radio" value="c">チャーチル</input>
+    </form>
+    <button class="btn" type="button" onclick="answer06();">確定する</button>  
+  </div>
+
+
+  <div id="sen">
+    <p id="score-message"></p>
+  </div>
+  <button class="btn-score" type="button" onclick="showScore();">合計得点を見る</button>
+  <button class="btn-kaisetu" type="button" onclick="location.href='02.html'">解説を見る</button>
+</div>
+
+
+
+
+
+<script>
+
+let score = 0;
+
+function showScore(){
+    const totalScore = document.getElementById('score-message');
+    
+    if(score == 6) {
+        totalScore.innerHTML = score + "点：満点！！(consoleで正誤答を確認)"
+    } else if(score >= 4) {
+        totalScore.innerHTML = score + "点：おしい！(consoleで正誤答を確認)";
+    } else if(score >= 3) {
+        totalScore.innerHTML = score + "点：まあまあ(consoleで正誤答を確認)";
+    } else {
+        totalScore.innerHTML = score + "点：残念…(consoleで正誤答を確認)";
+    }   
+}
+
+
+
+/*
+1問目の正解はBの後鳥羽上皇
+2問目の正解はAのみりん
+3問目の正解はCの石鹸
+4問目の正解はAの黄河文明
+5問目の正解はCのｃ
+6問目の正解はスターリン
+*/
+
+
+
+const correct = '正解！！';
+const incorrect = '不正解…';
+
+
+function answer01() {
+    const quiz_1 = document.getElementById('quiz-1');
+    const select = '1問目：' + quiz_1.answer.value + 'を選択';
+
+    if (quiz_1.answer.value == 'a') {
+        console.log(select);
+        console.log(incorrect);
+    // 正解はB
+    } else if (quiz_1.answer.value == 'b') {
+        score++;
+        console.log(select);
+        console.log(correct);
+    } else if (quiz_1.answer.value == 'c') {
+        console.log(select);
+        console.log(incorrect);
+    } else {
+        alert('1問目の答えを確定してください');
+    }
+    console.log('現在の点数：' + score); 
+}
+
+
+
+function answer02(){
+    const quiz_2 = document.getElementById('quiz-2');
+    const select = '2問目：' + quiz_2.answer.value + 'を選択';
+
+    // 正解はA
+    if (quiz_2.answer.value == 'a') {
+        score++;
+        console.log(select);
+        console.log(correct);
+    } else if (quiz_2.answer.value == 'b') {    
+        console.log(select);
+        console.log(incorrect);
+    } else if (quiz_2.answer.value == 'c') {
+        console.log(select);
+        console.log(incorrect);
+    } else {
+        alert('2問目の答えを確定してください');
+    }
+    console.log('現在の点数：' + score); 
+}
+
+
+
+function answer03(){
+    const quiz_3 = document.getElementById('quiz-3');
+    const select = '3問目：' + quiz_3.answer.value + 'を選択';
+
+    if (quiz_3.answer.value == 'a') {
+        console.log(select);
+        console.log(incorrect);
+    } else if (quiz_3.answer.value == 'b') {        
+        console.log(select);
+        console.log(incorrect);
+    // 正解はC
+    } else if (quiz_3.answer.value == 'c') {
+        score++;
+        console.log(select);
+        console.log(correct);
+    } else {
+        alert('3問目の答えを確定してください');
+    }
+    console.log('現在の点数：' + score); 
+}
+
+
+
+function answer04(){
+    const quiz_4 = document.getElementById('quiz-4');
+    const select = '4問目：' + quiz_4.answer.value + 'を選択';
+
+    // 正解はA
+    if (quiz_4.answer.value == 'a') {
+        score++;
+        console.log(select);
+        console.log(correct);
+    } else if (quiz_4.answer.value == 'b') {        
+        console.log(select);
+        console.log(incorrect);
+    } else if (quiz_4.answer.value == 'c') {
+        console.log(select);
+        console.log(incorrect);
+    } else {
+        alert('4問目の答えを確定してください');
+    }
+    console.log('現在の点数：' + score); 
+}
+
+
+
+function answer05(){
+    const quiz_5 = document.getElementById('quiz-5');
+    const select = '問目：' + quiz_5.answer.value + 'を選択';
+
+    if (quiz_5.answer.value == 'a') {
+        console.log(select);
+        console.log(incorrect);
+    } else if (quiz_5.answer.value == 'b') {        
+        console.log(select);
+        console.log(incorrect);
+    // 正解はC
+    } else if (quiz_5.answer.value == 'c') {
+        score++;
+        console.log(select);
+        console.log(correct);
+    } else if (quiz_5.answer.value == 'd') {
+        console.log(select);
+        console.log(incorrect);
+    } else{
+        alert('5問目の答えを確定してください');
+    }
+    console.log('現在の点数：' + score); 
+}
+
+
+
+function answer06(){
+    const quiz_6 = document.getElementById('quiz-6');
+    const select = '6問目：' + quiz_6.answer.value + 'を選択';
+
+    // 正解はA
+    if (quiz_6.answer.value == 'a') {
+        score++;
+        console.log(select);
+        console.log(correct);
+    } else if (quiz_6.answer.value == 'b') {    
+        console.log(select);
+        console.log(incorrect);
+    } else if (quiz_6.answer.value == 'c') {
+        console.log(select);
+        console.log(incorrect);
+    } else {
+        alert('6問目の答えを確定してください');
+    }
+    console.log('現在の点数：' + score); 
+}
+
+
+
+</script>
+
+
+</body>

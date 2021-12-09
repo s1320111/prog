@@ -1,0 +1,67 @@
+
+
+body {
+    font-family: '游明朝';
+    text-align: center;
+    color: #C29B20;
+    background-color: #23273D;
+  }
+  
+  .quizzes-container {
+    width: 550px;
+    margin: 50px auto;
+  }
+  
+  .sen {
+    width: 550px;
+    border-bottom:1px solid rgb(255, 255, 255);
+    padding-bottom: 20px;
+    margin: 20px auto;
+  }
+  
+  .btn {
+    margin-top: 20px;
+    font-family: serif;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background: #C29B20;
+    color:#fff;
+}
+  
+  #score-container {
+    border: 1px solid black;
+    height: 50px;
+  }
+  
+  .btn-score {
+    display: block;
+    margin: 20px auto;
+    font-family: serif;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .btn-score:hover {
+    background: #C29B20;
+    color:#fff;
+}
+
+  .btn-kaisetu{
+    display: block;
+    margin: 20px auto;
+    font-family: serif;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+
+  .btn-kaisetu:hover {
+    background: #C29B20;
+    color:#fff;
+}
