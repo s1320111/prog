@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>練習</title>
+</head>
+<body>
+<h1 id="view"></h1>
+<h2 id="d"></h2>
+ 
+<input type="range" id="size" min="1" max="100" value="50">
+<input type="color" id="col">
+<input type="date" id="dt">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+$("#dt").on("change",function(){
+    const v = $(this).val();
+    $("#d").html(v);
+});
+
+$("#size").on("change",function(){
+    const v = $(this).val();
+    $("#view").html(v);
+});
+
+$("#col").on("change",function(){
+    const v = $(this).val();
+    $("body").css("background",v);
+});
+
+
+
+
+
+
+</script>
+</body>
+</html>
